@@ -1,0 +1,168 @@
+body {
+    margin: 0 auto;
+    background-color: rgb(230, 227, 227);
+}
+
+#box1 {
+
+    background-color: rgb(131, 30, 30);
+    
+    color: white;
+    font-family: sans-serif;
+    font-size: calc(19px + (26 - 19) * ((100vw - 320px) / (1400 - 320)));
+    text-align: center;
+    padding: 15px;
+
+    /*box-shadow: 0px 1px 30px 8px rgba(65, 65, 65, 0.789);*/
+
+    border-bottom: 8px solid black;
+}
+
+#box1 p {
+    margin: 0;
+    display: inline-block;
+}
+
+#box2 {
+    font-family: sans-serif;
+    font-size: calc(14px + (19 - 14) * ((100vw - 320px) / (1400 - 320)));
+    color: white;
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#box2 div {
+    background-color: rgb(22, 20, 136);
+    width: calc(50% - 20px);
+    float: left;
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 0px;
+    border-radius: 30px;
+}
+
+#box2 a div:active {
+    color: white;
+    background-color: rgb(8, 7, 80);
+}
+
+#box2 div:hover {
+    color: white;
+    background-color: rgb(13, 2, 168);
+
+    transform: scale(105%);
+    /*transition: 0.3s;*/
+}
+
+#box1:hover {
+    color: white;
+    background-color: rgb(146, 0, 0);
+}
+
+#box1:active {
+    background-color: rgb(95, 0, 0);
+}
+
+a {
+    color: white; 
+    text-decoration: none;
+}
+
+
+a:visited {
+    color: white;
+}
+
+#box2::after {
+    content: "";
+    clear: left;
+}
+
+#box2 p {
+    padding: 10px;
+    margin: 10px;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+#scroll-up-arrow {
+    position: fixed;
+    bottom: 30px;
+    width: 46px;
+    height: 46px;
+    background-color: rgb(160, 161, 160, 0.8);
+
+    margin: 0 auto;
+    right: 30px;
+
+    border: 2px solid rgb(65, 65, 65);
+    border-radius: 100%;
+}
+
+#scroll-up-arrow::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    margin: 0 auto;
+    border-right:  2px solid rgba(65, 65, 65);
+    border-top: 2px solid rgb(65, 65, 65);
+    transform: rotate(-45deg);
+}
+
+#scroll-up-arrow:hover {
+    transform: scale(105%);
+}
+
+/*p[data-descr]:hover::after {
+    content: attr(data-descr);
+    position: absolute;
+    left: 0;
+    top: 70px;
+    min-width: 140px;
+    border-radius: 18px;
+    background-color: rgb(77, 77, 77);
+    padding: 12px;
+    color: white;
+    font-size: calc(10px + (14 - 10) * ((100vw - 320px) / (1400 - 320)));
+    font-weight: normal;
+    z-index: 1;
+}*/
+
+@media (max-width: 800px) {
+    #box2 div {
+        width: calc(100% - 20px);
+    }
+
+    #box2 {
+        width: 70%;
+    }
+
+    #scroll-up-arrow{
+        transform: scale(90%);
+    }
+
+    #scroll-up-arrow:hover {
+        transform: scale(95%);
+    }
+}
+
+@media (max-width: 700px) {
+    #box2 {
+        width: 80%;
+    }
+}
+
+@media (max-width: 550px) {
+    #box2 {
+        width: 90%;
+    }
+}
